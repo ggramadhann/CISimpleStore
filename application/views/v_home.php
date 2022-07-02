@@ -50,39 +50,28 @@
             </div>
         </div>
     </div>
-    <div class="produk-list">
-        <!--  -->
-        <div class="card-deck mx-auto container">
-            <!-- <?= print_r($result)?> -->
-            <?php foreach($result as $key => $data ){?>
-            <div class="card ml-2">
-                <img class="image-resposive" width="200px" src="<?= $data->image?>">
-                <div class="card-body">
-                    <h5 class="card-title"><b><?= $data->title?></b></h5>
-                    <p class="card-text"><?= $data->price?></p>
-                    <p class="card-text"><small class="text-muted"><button class="btn btn-sm btn-dark">add to cart</button></small></p>
-                </div>
-            </div>
-            <?php } ?>
-            <!-- <div class="card ml-2">
-                <img class="card-img-top" src="#">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Judul</b></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn btn-sm btn-dark">add to cart</button></small></p>
-                </div>
-            </div>
-            <div class="card ml-2">
-                <img class="card-img-top" src="#">
-                <div class="card-body">
-                    <h5 class="card-title"><b>Judul</b></h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted"><button class="btn btn-sm btn-dark">add to cart</button></small></p>
-                </div>
-            </div> -->
-           
-            
-        </div>
-        <!--  -->
+  <!-- card -->
+  <div class='container-fluid'>
+    <div class="row justify-content-center">
+
+        <?php foreach($result as $key => $data ){?>
+     <div class="card col-md-3 col-10 mt-5  ml-5">
+         <img class='mx-auto img-responsive mt-2'
+             src="<?= $data->image?>"
+             width="150" height="150"/>
+         <div class="card-body text-center mx-auto">
+             <div class='cvp'>
+                 <h5 class="card-title font-weight-bold"><?= $data->title?></h5>
+                 <p class="card-text"><?= $data->price?></p>
+                 <a href="#" class="btn btn-sm btn-dark px-auto">view details</a><br />
+                 <a href="#" class="btn btn-sm btn-dark cart px-auto mt-2">ADD TO CART</a>
+             </div>
+         </div>
+     </div>
+     <?php } ?>
     </div>
+     <!-- <?= print_r($result)?> -->
+
+</div>
+  <!--  -->
 </div>
