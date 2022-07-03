@@ -5,35 +5,35 @@ use Xendit\Xendit;
 class Api extends CI_Controller {
 
 
-	public function index()
-	{
-        /// hanya untuk test beerhasil
-        Xendit::setApiKey('xnd_development_sL1l1Rskb2kAEGRBuDELV7Fyu6VxDrIlPgx7VkWQUCeJ8vRbCArOTqNcdYtHE');
+	// public function index()
+	// {
+  //       /// hanya untuk test beerhasil
+  //       Xendit::setApiKey('xnd_development_sL1l1Rskb2kAEGRBuDELV7Fyu6VxDrIlPgx7VkWQUCeJ8vRbCArOTqNcdYtHE');
 
-        $params = [ 
-          'external_id' => 'invoice_demo_1475801962607',
-          'payer_email' => 'gilang@tester.com',
-          'description' => 'lagi ngetes beli baju',
-          'amount' => 10000,
-          'items' => [
-						[
-							// 'name' => '',
-							'name' => 'Baju Biru Tes',
-							'quantity' => 1,
-							'price' => 10000,
-							'category' => 'fashion',
-							'url' => base_url()
-						]
-					],
-        ];
+  //       $params = [ 
+  //         'external_id' => 'invoice_demo_1475801962607',
+  //         'payer_email' => 'gilang@tester.com',
+  //         'description' => 'lagi ngetes beli baju',
+  //         'amount' => 10000,
+  //         'items' => [
+	// 					[
+	// 						// 'name' => '',
+	// 						'name' => 'Baju Biru Tes',
+	// 						'quantity' => 1,
+	// 						'price' => 10000,
+	// 						'category' => 'fashion',
+	// 						'url' => base_url()
+	// 					]
+	// 				],
+  //       ];
       
-        $createInvoice = \Xendit\Invoice::create($params);
-        // print_r($createInvoice);
-        // echo json_encode($createInvoice);
-        return Redirect($createInvoice['invoice_url']);
+  //       $createInvoice = \Xendit\Invoice::create($params);
+  //       // print_r($createInvoice);
+  //       // echo json_encode($createInvoice);
+  //       return Redirect($createInvoice['invoice_url']);
       
 
-	}
+	// }
 
 
   // public function index(){

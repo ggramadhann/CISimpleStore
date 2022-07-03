@@ -6,7 +6,11 @@ use Xendit\Xendit;
 
 class Keranjang extends CI_Controller
 {
+	public function ___construct(){
+        parent::__construct();
+		$this->load->helpers('rupiah_helper');
 
+    }
 
 	public function checkout()
 	{
@@ -184,14 +188,29 @@ class Keranjang extends CI_Controller
 				'payer_email' => $post['email'],
 				'description' => 'lagi ngetes beli produk nih',
 				'amount' => $post['hg'],
+				'customer' => [
+					'given_names' => $post['namaDepan'],
+					'surname' => $post['namaBelakang'],
+					'email' => $post['email'],
+					'mobile_number' => $post['noTlp'],
+					// 'address' => [
+					// 	[
+					// 		'city' => $post['kota'],
+					// 		'country' => $post['negara'],
+					// 		'postal_code' => $post['kodePos'],
+					// 		'state' => $post['provinsi'],
+					// 		'street_line1' => $post['alamat'],
+					// 		'street_line2' => ''
+					// 	]
+					// ]
+				],
 				'items' => [
 					[
-						// 'image' => $post['img'],
 						'name' => $post['tt'],
 						'quantity' => 1,
 						'price' => $post['hg'],
 						'category' => $post['cate'],
-						'url' => base_url()
+						'url' => $post['img'],
 					]
 				],
 				'fees' => [

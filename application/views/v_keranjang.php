@@ -10,7 +10,7 @@
                 <div class="card-body text-center mx-auto">
                     <div class='cvp'>
                         <h5 class="card-title font-weight-bold"><?= $data->title ?></h5>
-                        <p class="card-text">Rp. <?= $data->price ?></p>
+                        <p class="card-text">Rp. <?= rupiah($data->price) ?></p>
                         <!-- <a href="#" class="btn btn-sm btn-dark px-auto">view</a><br /> -->
                         <!-- <a href="<?= base_url('Keranjang/checkout' . '/' . $data->id) ?>" data="<?= $data->id ?>"  name="id"  value="<?= $data->id ?>" class="btn btn-sm btn-dark cart px-auto mt-2">Pesan sekarang</a> -->
                     </div>
@@ -31,7 +31,7 @@
                     <?php foreach ($result as $key => $data) {?>
                         <input type="hidden" class="form-control" id="" value="<?=$data->id?>" name="idx">
                         <input type="hidden" class="form-control" id="" value="<?=$data->title?>" name="tt">
-                        <input type="hidden" class="form-control" id="" value="<?=$data->price?>" name="hg">
+                        <input type="hidden" class="form-control" id="" value="<?=rupiah($data->price)?>" name="hg">
                         <input type="hidden" class="form-control" id="" value="<?=$data->category?>" name="cate">
                         <input type="hidden" class="form-control" id="" value="<?=$data->image?>" name="img">
                     <?php } ?>

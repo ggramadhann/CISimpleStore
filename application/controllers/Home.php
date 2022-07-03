@@ -3,9 +3,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Home extends CI_Controller {
 
-    // public function ___construct(){
-    //     parent::__construct();
-    // }
+    public function ___construct(){
+        parent::__construct();
+		$this->load->helpers('rupiah_helper');
+
+    }
 
 	public function index()
 	{

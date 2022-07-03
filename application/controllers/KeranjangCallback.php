@@ -20,3 +20,10 @@
     "payment_channel": "OVO",
     "payment_method_id": "pm-d256bf65-910c-47f3-a0e6-6b58c67bc733"
 } -->
+
+$callbackUrlParams = [
+    'url' => 'https://webhook.site/c9c9140b-96b8-434c-9c59-7440eeae4d7f'
+];
+$callbackType = 'invoice';
+$setCallbackUrl = \Xendit\Platform::setCallbackUrl($callbackType, $callbackUrlParams);
+var_dump($setCallbackUrl);
