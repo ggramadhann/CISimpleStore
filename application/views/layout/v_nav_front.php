@@ -27,11 +27,11 @@
 
         <div class="buttons">
           <a href="<?= base_url()?>Login" class="btn btn-sm btn-outline-dark ms-2">
-              <i class="fas fa-sign-in me-1"></i> Login</a>
-          <a href="" class="btn btn-sm btn-outline-dark ms-2">
+              <i class="fas fa-sign-in me-1"></i> Login Admin</a>
+          <!-- <a href="" class="btn btn-sm btn-outline-dark ms-2">
               <i class="fas fa-sign-in me-1"></i> Register</a>
           <a href="" class="btn btn-sm btn-outline-dark ms-2">
-              <i class="fas fa-sign-in me-1"></i> Keranjang [0]</a>
+              <i class="fas fa-sign-in me-1"></i> Keranjang [0]</a> -->
       </div>
       <!-- endbtn -->
       </div>

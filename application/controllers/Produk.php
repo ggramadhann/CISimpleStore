@@ -15,5 +15,9 @@ class Produk extends CI_Controller {
         $array = json_decode(json_encode($data), FALSE);
         // var_dump($array);
         print_r($array);
+
+        // $secretkey = 'xnd_development_P9cVv6lMVPHDXh6sTzeGrYcBRvB6cLhmCchNRWFAt76saEhr9F5naHiRX9aS8Vi';
+        //         $p = base64_encode($secretkey);
+        // echo $p;
 	}
 }

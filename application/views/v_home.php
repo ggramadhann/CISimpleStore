@@ -40,7 +40,7 @@
                 <hr />
             </div>
         </div>
-        <div class="col-12-mb-5">
+        <!-- <div class="col-12-mb-5">
             <div class="btnKategori d-flex justify-content-center mb-2">
                 <button class="btn btn-sm btn-outline-dark ml-2">All</button>
                 <button class="btn btn-sm btn-outline-dark ml-2">Perhiasan</button>
@@ -48,12 +48,13 @@
                 <button class="btn btn-sm btn-outline-dark ml-2">Laki-Laki</button>
                 <button class="btn btn-sm btn-outline-dark ml-2">Perempuan</button>
             </div>
-        </div>
+        </div> -->
     </div>
   <!-- card -->
   <div class='container-fluid'>
     <div class="row justify-content-center">
 
+        <!-- <?= print_r($result)?> -->
         <?php foreach($result as $key => $data ){?>
      <div class="card col-md-3 col-10 mt-5  ml-5">
          <img class='mx-auto img-responsive mt-2'
@@ -63,14 +64,13 @@
              <div class='cvp'>
                  <h5 class="card-title font-weight-bold"><?= $data->title?></h5>
                  <p class="card-text"><?= $data->price?></p>
-                 <a href="#" class="btn btn-sm btn-dark px-auto">view details</a><br />
-                 <a href="#" class="btn btn-sm btn-dark cart px-auto mt-2">ADD TO CART</a>
+                 <!-- <a href="#" class="btn btn-sm btn-dark px-auto">view</a><br /> -->
+                 <a href="<?= base_url('Keranjang/checkout'. '/' .$data->id)?>" data="<?= $data->id ?>"  name="id"  value="<?=$data->id?>" class="btn btn-sm btn-dark cart px-auto mt-2">Pesan sekarang</a>
              </div>
          </div>
      </div>
      <?php } ?>
     </div>
-     <!-- <?= print_r($result)?> -->
 
 </div>
   <!--  -->
