@@ -7,9 +7,9 @@ defined('BASEPATH') OR exit('no direct script access allowed');
 
 class Cart_model extends CI_Model {
 
-    public function index(){
-
-        
+    public function insertData($data){
+        // store data customer
+        $this->db->insert('tb_cart', $data);
     }
 
 

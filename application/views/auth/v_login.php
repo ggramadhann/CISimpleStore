@@ -39,13 +39,13 @@
 
       <div class="alert alert-light mt-4 text-muted" role="alert">
         <div class="row mx-auto">
-            <div class="userTxt">
+            <!-- <div class="userTxt">
 
                 <p>Demo User :<br>
                 username = user<br>
                 password = user
                 </p>
-            </div>
+            </div> -->
             <div class="userAdm ml-4">
 
                 <p>Demo Admin :<br>

@@ -6,17 +6,17 @@ class Produk extends CI_Controller {
 
 	public function index()
 	{
-        $this->load->model('Produk_model');
-        $data = $this->Produk_model->get_all_produk();
+        // $this->load->model('Produk_model');
+        // $data = $this->Produk_model->get_all_produk();
         // $id = 3;
         // $produkbyid = $this->Produk_model->get_produk_id($id);
         // echo json_encode($produkbyid, true);
         // 
-        $array = json_decode(json_encode($data), FALSE);
+        // $array = json_decode(json_encode($produkbyid), FALSE);
         // var_dump($array);
-        print_r($array);
+        // print_r($array);
 
-        // $secretkey = 'xnd_development_P9cVv6lMVPHDXh6sTzeGrYcBRvB6cLhmCchNRWFAt76saEhr9F5naHiRX9aS8Vi';
+        // $secretkey = 'xnd_development_zecieYItFvVnin6dvYzv8VPjbjpe1uC1LhEK2RkwzTzbAT3kqm5UTGFHoIFI6A';
         //         $p = base64_encode($secretkey);
         // echo $p;
 	}

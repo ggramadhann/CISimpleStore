@@ -24,67 +24,79 @@
                 <h5><b>Data diri anda :</b></h5>
                 <hr>
                 <!-- form checkout -->
-                <form>
+                <form action="<?= base_url() ?>Keranjang/tes_post" method="POST">
+                <!-- <form action="<?= base_url() ?>Keranjang/storeData" method="POST"> -->
+                    <!-- Todo CSRF -->
+                    <!-- get id -->
+                    <?php foreach ($result as $key => $data) {?>
+                        <input type="hidden" class="form-control" id="" value="<?=$data->id?>" name="idx">
+                        <input type="hidden" class="form-control" id="" value="<?=$data->title?>" name="tt">
+                        <input type="hidden" class="form-control" id="" value="<?=$data->price?>" name="hg">
+                        <input type="hidden" class="form-control" id="" value="<?=$data->category?>" name="cate">
+                        <input type="hidden" class="form-control" id="" value="<?=$data->image?>" name="img">
+                    <?php } ?>
+                        
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="FirstName">First Name</label>
-                                <input type="text" class="form-control" id="" value="First Name" require>
+                                <label for="NamaDepan">Nama Depan</label>
+                                <input type="text" class="form-control" id="" value="Nama Depan" name="namaDepan" required>
                                 <!-- <small id="email" class="form-text text-muted"></small> -->
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="LastName">Last Name</label>
-                                <input type="text" class="form-control" id="" placeholder="Last Name" require>
+                                <label for="NamaBelakang">Nama Belakang</label>
+                                <input type="text" class="form-control" id="" placeholder="Nama Belakang" name="namaBelakang" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="Email">Email Address</label>
-                                <input type="email" class="form-control" id="" placeholder="Email Address" require>
+                                <input type="email" class="form-control" id="" placeholder="Email Address" name="email" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="WA">Whatsapp Number</label>
-                                <input type="text" class="form-control" id="" placeholder="Whatsapp Number" require>
+                                <label for="Phone">No Tlp</label>
+                                <input type="number" class="form-control" id="" placeholder="No telp" name="noTlp" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label for="Negara">Negara</label>
+                                <input type="text" class="form-control" id="negara" placeholder="Negara" name="negara" value="Indonesia" readonly>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="Provinsi">Provinsi</label>
-                                <input type="text" class="form-control" id="" placeholder="Provinsi" require>
+                                <input type="text" class="form-control" id="" placeholder="Provinsi" name="provinsi" required>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Kabupaten">Kabupaten</label>
-                                <input type="text" class="form-control" id="Kabupaten" placeholder="Kabupaten" require>
+                                <label for="Kota">Kota</label>
+                                <input type="text" class="form-control" id="Kota" placeholder="Kota" name="kota" required>
                             </div>
                         </div>
+
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="Kelurahan">Kelurahan</label>
-                                <input type="text" class="form-control" id="Kelurahan" placeholder="Kelurahan" require>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="PostalCode">PostalCode</label>
-                                <input type="text" class="form-control" id="PostalCode" placeholder="Postal Code" require>
+                                <label for="KodePos">Kode Pos</label>
+                                <input type="number" class="form-control" id="KodePos" placeholder="Kode Pos" name="kodePos" required>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
                                 <label for="Alamat">Alamat</label>
-                                <input type="text" class="form-control" id="" placeholder="Alamat" require>
+                                <input type="text" class="form-control" id="Alamat" placeholder="Alamat" name="alamat" required>
                             </div>
                         </div>
-                        
-                        <a href="<?= base_url('Keranjang/storedata'. '/' .$data->id)?>" data="<?= $data->id ?>"  name="id"  value="<?=$data->id?>" class="btn btn-dark ml-2">Checkout</a>
 
-                        <!-- <button type="submit" name="checkout" class="btn btn-primary ml-2">Checkout</button> -->
+                        <!-- <a href="<?= base_url('Keranjang/storedata' . '/' . $data->id) ?>" data="<?= $data->id ?>"  name="id"  value="<?= $data->id ?>" class="btn btn-dark ml-2">Checkout</a> -->
+
+                        <button type="submit" name="checkout" class="btn btn-dark ml-2">Checkout</button>
                     </div>
 
                 </form>
@@ -92,7 +104,8 @@
             </div>
         </div>
         <!--  -->
+        
     </div>
-
+    
 </div>
 <!--  -->
